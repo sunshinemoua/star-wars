@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Card from "./Card";
+import Card from "../components/Card";
 
 const Starships = () => {
   const starshipURL = "https://swapi.dev/api/starships";
@@ -15,9 +15,9 @@ const Starships = () => {
 
   return (
     <div>
+      <h1> SPACESHIPS </h1>
       {peeps.map((peep) => (
         <Card>
-          {" "}
           <ul>
             <li key={peep.name}>
               Name: {peep.name} <br /> Model: {peep.model} <br /> Crew:{" "}
