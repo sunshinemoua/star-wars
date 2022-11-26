@@ -4,13 +4,12 @@ import Starships from "./pages/Spaceships";
 import Card from "./components/Card";
 import Navbar from "./components/NavBar";
 import Pics from "./Pics";
-import "./App.css";
+import classes from "./App.module.css";
 
 const App = () => {
   return (
-    <div>
+    <div className={classes.app}>
       <Navbar></Navbar>
-      <h1>Star Wars </h1>
     </div>
   );
 };

@@ -1,0 +1,11 @@
+.outer {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: baseline;
+  justify-content: space-around;
+}
+
+.header {
+  color: rgb(199, 199, 120);
+  margin: 3rem;
+}

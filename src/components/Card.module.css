@@ -1,11 +1,10 @@
 .card {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: baseline;
   width: 15rem;
-  margin: 0.5rem;
-  padding: 0.5rem;
-  color: red;
+  height: 10rem;
+  margin: 1rem;
+  padding: 1rem;
+  background-color: black;
+  color: rgb(199, 199, 120);
   border: solid 1px;
 }
 

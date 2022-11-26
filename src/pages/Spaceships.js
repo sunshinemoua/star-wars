@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Card from "../components/Card";
+import classes from "./Spaceships.module.css";
 
 const Starships = () => {
   const starshipURL = "https://swapi.dev/api/starships";
@@ -15,19 +16,21 @@ const Starships = () => {
 
   return (
     <div>
-      <h1> SPACESHIPS </h1>
-      {peeps.map((peep) => (
-        <Card>
-          <ul>
-            <li key={peep.name}>
-              Name: {peep.name} <br /> Model: {peep.model} <br /> Crew:{" "}
-              {peep.crew} <br />
-              Passengers: {peep.passengers} <br /> Hyperdrive Rating:{" "}
-              {peep.hyperdrive_rating}
-            </li>
-          </ul>
-        </Card>
-      ))}
+      <h1 className={classes.header}> SPACESHIPS </h1>
+      <div className={classes.outer}>
+        {peeps.map((peep) => (
+          <Card>
+            <ul>
+              <li key={peep.name}>
+                Name: {peep.name} <br /> Model: {peep.model} <br /> Crew:{" "}
+                {peep.crew} <br />
+                Passengers: {peep.passengers} <br /> Hyperdrive Rating:{" "}
+                {peep.hyperdrive_rating}
+              </li>
+            </ul>
+          </Card>
+        ))}{" "}
+      </div>
     </div>
   );
 };
