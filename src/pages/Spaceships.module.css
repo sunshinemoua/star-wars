@@ -6,6 +6,8 @@
 }
 
 .header {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 0.5rem;
   color: rgb(199, 199, 120);
   margin: 3rem;
 }

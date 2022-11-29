@@ -1,3 +1,6 @@
+import React, { useState, useEffect } from "react";
+import Spaceships from "./Spaceships.js";
+
 const Films = () => {
   return (
     <div>

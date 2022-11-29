@@ -11,27 +11,15 @@ import Spaceships from "../pages/Spaceships";
 
 const NavBar = () => {
   return (
-    <BrowserRouter>
-      <div>
-        <Link to="/"> Home </Link>
-        <Link to="/films"> Films </Link>
-        <Link to="/planets"> Planets </Link>
-        <Link to="/species"> Species </Link>
-        <Link to="/people"> People </Link>
-        <Link to="/vehicles"> Vehicles </Link>
-        <Link to="/spaceships"> Spaceships </Link>
-      </div>
-
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/films" element={<Films />} />
-        <Route path="/planets" element={<Planets />} />
-        <Route path="/species" element={<Species />} />
-        <Route path="/people" element={<People />} />
-        <Route path="/vehicles" element={<Vehicles />} />
-        <Route path="/spaceships" element={<Spaceships />} />
-      </Routes>
-    </BrowserRouter>
+    <div>
+      <Link to="/"> Home </Link>
+      <Link to="/films"> Films </Link>
+      <Link to="/planets"> Planets </Link>
+      <Link to="/species"> Species </Link>
+      <Link to="/people"> People </Link>
+      <Link to="/vehicles"> Vehicles </Link>
+      <Link to="/spaceships"> Spaceships </Link>
+    </div>
   );
 };
 

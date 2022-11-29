@@ -3,29 +3,21 @@ import axios from "axios";
 import Card from "../components/Card";
 import classes from "./Spaceships.module.css";
 
-const Starships = () => {
-  const starshipURL = "https://swapi.dev/api/starships";
-
-  const [peeps, setPeeps] = useState([]);
-
-  useEffect(() => {
-    axios.get(starshipURL).then((response) => {
-      setPeeps(response.data.results);
-    });
-  }, []);
-
+const Starships = ({ spaceships }) => {
+  console.log(spaceships);
   return (
     <div>
       <h1 className={classes.header}> SPACESHIPS </h1>
       <div className={classes.outer}>
-        {peeps.map((peep) => (
+        {spaceships.map((spaceship) => (
           <Card>
             <ul>
-              <li key={peep.name}>
-                Name: {peep.name} <br /> Model: {peep.model} <br /> Crew:{" "}
-                {peep.crew} <br />
-                Passengers: {peep.passengers} <br /> Hyperdrive Rating:{" "}
-                {peep.hyperdrive_rating}
+              <li key={spaceship.name}>
+                Name: {spaceship.name}
+                <br /> Model: {spaceship.model} <br /> Crew: {spaceship.crew}{" "}
+                <br />
+                Passengers: {spaceship.passengers} <br /> Hyperdrive Rating:{" "}
+                {spaceship.hyperdrive_rating}
               </li>
             </ul>
           </Card>
