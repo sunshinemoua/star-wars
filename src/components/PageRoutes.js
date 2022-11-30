@@ -14,7 +14,7 @@ const PageRoutes = ({ spaceships }) => {
       <Route path="/films" element={<Films />} />
       <Route path="/planets" element={<Planets />} />
       <Route path="/species" element={<Species />} />
-      <Route path="/people" element={<People />} />
+      <Route path="/people" element={<People people={people} />} />
       <Route path="/vehicles" element={<Vehicles />} />
       <Route
         path="/spaceships"

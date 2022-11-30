@@ -34,7 +34,7 @@ const App = () => {
         setSpecies(response.data);
       }),
       axios.get(peopleURL).then((response) => {
-        setPeople(response.data);
+        setPeople(response.data.results);
       }),
       axios.get(vehiclesURL).then((response) => {
         setVehicles(response.data);
@@ -63,7 +63,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <Navbar />
-      <PageRoutes spaceships={spaceships} />
+      <PageRoutes spaceships={spaceships} people={people} />
     </BrowserRouter>
   );
 };

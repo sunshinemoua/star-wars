@@ -1,0 +1,15 @@
+.navbar {
+  margin: 2rem;
+  padding: 1rem;
+}
+
+.link {
+  margin: 1rem;
+  padding: 1rem;
+  color: yellow;
+}
+
+.navUl a.active {
+  background-color: red;
+  text-decoration: overline underline;
+}

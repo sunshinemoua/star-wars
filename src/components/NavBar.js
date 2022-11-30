@@ -1,24 +1,41 @@
-import React, { useState, useEffect } from "react";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import Home from "../pages/Home";
-import Films from "../pages/Films";
-import Planets from "../pages/Planets";
-import Species from "../pages/Species";
-import People from "../pages/People";
-import Vehicles from "../pages/Vehicles";
-
-import Spaceships from "../pages/Spaceships";
+import React from "react";
+import { NavLink } from "react-router-dom";
+import classes from "./NavBar.module.css";
 
 const NavBar = () => {
   return (
-    <div>
-      <Link to="/"> Home </Link>
-      <Link to="/films"> Films </Link>
-      <Link to="/planets"> Planets </Link>
-      <Link to="/species"> Species </Link>
-      <Link to="/people"> People </Link>
-      <Link to="/vehicles"> Vehicles </Link>
-      <Link to="/spaceships"> Spaceships </Link>
+    <div className={classes.navbar}>
+      <NavLink to="/" activeClassName={classes.active} className={classes.link}>
+        Home
+      </NavLink>
+      <NavLink
+        to="/films"
+        activeClassName={classes.active}
+        className={classes.link}
+      >
+        {" "}
+        Films{" "}
+      </NavLink>
+      <NavLink to="/planets" className={classes.link}>
+        {" "}
+        Planets{" "}
+      </NavLink>
+      <NavLink to="/species" className={classes.link}>
+        {" "}
+        Species{" "}
+      </NavLink>
+      <NavLink to="/people" className={classes.link}>
+        {" "}
+        People{" "}
+      </NavLink>
+      <NavLink to="/vehicles" className={classes.link}>
+        {" "}
+        Vehicles{" "}
+      </NavLink>
+      <NavLink to="/spaceships" className={classes.link}>
+        {" "}
+        Spaceships{" "}
+      </NavLink>
     </div>
   );
 };
