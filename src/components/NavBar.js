@@ -5,36 +5,47 @@ import classes from "./NavBar.module.css";
 const NavBar = () => {
   return (
     <div className={classes.navbar}>
-      <NavLink to="/" activeClassName={classes.active} className={classes.link}>
+      <NavLink
+        to="/"
+        className={({ isActive }) => (isActive ? classes.active : classes.link)}
+      >
         Home
       </NavLink>
       <NavLink
         to="/films"
-        activeClassName={classes.active}
-        className={classes.link}
+        className={({ isActive }) => (isActive ? classes.active : classes.link)}
       >
-        {" "}
-        Films{" "}
+        Films
       </NavLink>
-      <NavLink to="/planets" className={classes.link}>
-        {" "}
-        Planets{" "}
+      <NavLink
+        to="/planets"
+        className={({ isActive }) => (isActive ? classes.active : classes.link)}
+      >
+        Planets
       </NavLink>
-      <NavLink to="/species" className={classes.link}>
-        {" "}
-        Species{" "}
+      <NavLink
+        to="/species"
+        className={({ isActive }) => (isActive ? classes.active : classes.link)}
+      >
+        Species
       </NavLink>
-      <NavLink to="/people" className={classes.link}>
-        {" "}
-        People{" "}
+      <NavLink
+        to="/people"
+        className={({ isActive }) => (isActive ? classes.active : classes.link)}
+      >
+        People
       </NavLink>
-      <NavLink to="/vehicles" className={classes.link}>
-        {" "}
-        Vehicles{" "}
+      <NavLink
+        to="/vehicles"
+        className={({ isActive }) => (isActive ? classes.active : classes.link)}
+      >
+        Vehicles
       </NavLink>
-      <NavLink to="/spaceships" className={classes.link}>
-        {" "}
-        Spaceships{" "}
+      <NavLink
+        to="/spaceships"
+        className={({ isActive }) => (isActive ? classes.active : classes.link)}
+      >
+        Spaceships
       </NavLink>
     </div>
   );

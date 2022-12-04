@@ -16,28 +16,28 @@ const App = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const filmsURL = "https://swapi.dev/api/films";
-    const planetsURL = "https://swapi.dev/api/planets";
-    const speciesURL = "https://swapi.dev/api/species";
-    const peopleURL = "https://swapi.dev/api/people";
-    const vehiclesURL = "https://swapi.dev/api/vehicles";
-    const spaceshipsURL = "https://swapi.dev/api/starships";
+    const filmsURL = "https://swapi.py4e.com//api/films";
+    const planetsURL = "https://swapi.py4e.com//api/planets";
+    const speciesURL = "https://swapi.py4e.com//api/species";
+    const peopleURL = "https://swapi.py4e.com//api/people";
+    const vehiclesURL = "https://swapi.py4e.com//api/vehicles";
+    const spaceshipsURL = "https://swapi.py4e.com//api/starships";
 
     Promise.all([
       axios.get(filmsURL).then((response) => {
-        setFilms(response.data);
+        setFilms(response.data.results);
       }),
       axios.get(planetsURL).then((response) => {
-        setPlanets(response.data);
+        setPlanets(response.data.results);
       }),
       axios.get(speciesURL).then((response) => {
-        setSpecies(response.data);
+        setSpecies(response.data.results);
       }),
       axios.get(peopleURL).then((response) => {
         setPeople(response.data.results);
       }),
       axios.get(vehiclesURL).then((response) => {
-        setVehicles(response.data);
+        setVehicles(response.data.results);
       }),
       axios.get(spaceshipsURL).then((response) => {
         setSpaceships(response.data.results);
@@ -63,7 +63,14 @@ const App = () => {
   return (
     <BrowserRouter>
       <Navbar />
-      <PageRoutes spaceships={spaceships} people={people} />
+      <PageRoutes
+        films={films}
+        planets={planets}
+        species={species}
+        people={people}
+        vehicles={vehicles}
+        spaceships={spaceships}
+      />
     </BrowserRouter>
   );
 };

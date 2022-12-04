@@ -7,15 +7,22 @@ import People from "../pages/People";
 import Vehicles from "../pages/Vehicles";
 import Spaceships from "../pages/Spaceships";
 
-const PageRoutes = ({ spaceships }) => {
+const PageRoutes = ({
+  films,
+  planets,
+  species,
+  people,
+  vehicles,
+  spaceships,
+}) => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/films" element={<Films />} />
-      <Route path="/planets" element={<Planets />} />
-      <Route path="/species" element={<Species />} />
+      <Route path="/films" element={<Films films={films} />} />
+      <Route path="/planets" element={<Planets planets={planets} />} />
+      <Route path="/species" element={<Species species={species} />} />
       <Route path="/people" element={<People people={people} />} />
-      <Route path="/vehicles" element={<Vehicles />} />
+      <Route path="/vehicles" element={<Vehicles vehicles={vehicles} />} />
       <Route
         path="/spaceships"
         element={<Spaceships spaceships={spaceships} />}

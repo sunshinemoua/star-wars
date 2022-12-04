@@ -3,13 +3,13 @@
   padding: 1rem;
 }
 
-.link {
+.link,
+.link:visited {
   margin: 1rem;
   padding: 1rem;
   color: yellow;
 }
 
-.navUl a.active {
-  background-color: red;
-  text-decoration: overline underline;
+a.active {
+  color: white;
 }
