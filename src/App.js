@@ -11,7 +11,7 @@ import {
   getPeople,
   getVehicles,
   getSpaceships,
-} from "./starWarsSlice";
+} from "./pages/redux/starWarsSlice";
 
 const App = () => {
   const dispatch = useDispatch();
