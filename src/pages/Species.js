@@ -1,7 +1,9 @@
+import { useSelector } from "react-redux";
 import Card from "../components/Card";
 import classes from "./DataCard.module.css";
 
-const Species = ({ species }) => {
+const Species = () => {
+  const { species } = useSelector((state) => state.reducer);
   return (
     <div>
       <h1 className={classes.header}> SPECIES </h1>

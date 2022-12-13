@@ -1,8 +1,9 @@
 import Card from "../components/Card";
 import classes from "./DataCard.module.css";
+import { useSelector } from "react-redux";
 
-const People = ({ people }) => {
-  console.log(people);
+const People = () => {
+  const { people } = useSelector((state) => state.reducer);
   return (
     <div>
       <h1 className={classes.header}> PEOPLE </h1>
