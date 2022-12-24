@@ -6,7 +6,7 @@ const Vehicles = () => {
   const { vehicles } = useSelector((state) => state.reducer);
   return (
     <div>
-      <h1 className={classes.header}>Vehicles</h1>
+      <h1 className={classes.header}>VEHICLES</h1>
       <div className={classes.outer}>
         {vehicles.map((vehicle) => (
           <Card key={vehicle.name}>
