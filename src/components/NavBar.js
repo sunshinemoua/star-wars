@@ -6,7 +6,7 @@ const NavBar = () => {
   return (
     <div className={classes.navbar}>
       <NavLink to="/" className={classes["navbar-logo"]}>
-        LOGO
+        Star Wars Archives
       </NavLink>
 
       <a href="#" className={classes["toggle-button"]}>
