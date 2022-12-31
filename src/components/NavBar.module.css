@@ -1,15 +1,60 @@
 .navbar {
+  display: flex;
+  justify-content: space-between;
   margin: 2rem;
-  padding: 1rem;
+}
+
+.navbar-logo {
+  text-decoration: none;
+  color: white;
+  width: 20%;
+}
+
+.navbar-links {
+  display: flex;
+  width: 80%;
+  justify-content: space-evenly;
 }
 
 .link,
 .link:visited {
-  margin: 1rem;
-  padding: 1rem;
   color: yellow;
 }
 
 a.active {
   color: white;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  background: blue;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+  .toggle-button {
+    display: flex;
+  }
+
+  .navbar-links {
+    display: none;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
